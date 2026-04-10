@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Creative Designer</title>
+    <meta name="description" content="Get in touch to start a new project or collaboration.">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">Design<span>Studio</span></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="line1"></span>
+                    <span class="line2"></span>
+                    <span class="line3"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section dark-bg" style="padding-top:120px; padding-bottom:60px;">
+        <div class="container text-center">
+            <h1>Let's <span class="text-orange">Talk.</span></h1>
+            <p>Ready to start your next project? Get in touch with me below.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-wrapper">
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>I'd love to hear from you. Reach out using the details below or fill out the form.</p>
+
+                    <ul class="contact-details">
+                        <li>
+                            <strong class="text-teal">Email:</strong><br>
+                            hello@designstudio.example
+                        </li>
+                        <li>
+                            <strong class="text-teal">Phone:</strong><br>
+                            +1 (555) 123-4567
+                        </li>
+                        <li>
+                            <strong class="text-teal">Studio:</strong><br>
+                            123 Creative Studio Ave,<br>
+                            Design District, CA 90210
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="How can I help you?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 DesignStudio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <form id="contact-form">
+        <input type="text" id="name" required>
+        <input type="email" id="email" required>
+        <textarea id="message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</body>
+
+</html>
