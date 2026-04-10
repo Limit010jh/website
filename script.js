@@ -118,6 +118,7 @@ function initProjectFilter() {
 
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
+        console.log("Form Submitted!");
 
         // جمع البيانات من الفورم
         const formData = {
