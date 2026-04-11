@@ -57,7 +57,7 @@ function initN8nContact() {
         console.log("Sending to n8n...", formData);
 
         try {
-            const response = await fetch('https://limit22.app.n8n.cloud/webhook/portfolio-contact', {
+            const response = await fetch('https://limit22.app.n8n.cloud/webhook-test/portfolio-contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
