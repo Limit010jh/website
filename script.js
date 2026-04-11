@@ -64,7 +64,6 @@ function initN8nContact() {
             });
 
             if (response.ok) {
-                alert('Message sent successfully!');
                 contactForm.reset();
             } else {
                 alert('Failed to send message. Please check CORS settings in n8n.');
