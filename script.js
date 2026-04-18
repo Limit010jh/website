@@ -56,32 +56,28 @@ function initN8nContact() {
 
         console.log("Sending to n8n...", formData);
 
-        try {
-            const response = await fetch('https://limit22.app.n8n.cloud/webhook/portfolio-contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-            });
-
-if (response.ok) {
-    contactForm.reset();
-    
-    // إضافة رسالة done
-    const btn = contactForm.querySelector('button[type="submit"]');
-    btn.textContent = '✅ Done!';
-    btn.style.backgroundColor = '#28a745';
-    
-    setTimeout(() => {
-        btn.textContent = 'Send Message';
-        btn.style.backgroundColor = '';
-    }, 3000);
-}
-            } else {
-                alert('Failed to send message. Please check CORS settings in n8n.');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Error connecting to n8n.');
-        }
+try {
+    const response = await fetch('https://limit22.app.n8n.cloud/webhook/portfolio-contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
     });
+
+    if (response.ok) {
+        contactForm.reset();
+        
+        const btn = contactForm.querySelector('button[type="submit"]');
+        btn.textContent = '✅ Done!';
+        btn.style.backgroundColor = '#28a745';
+        
+        setTimeout(() => {
+            btn.textContent = 'Send Message';
+            btn.style.backgroundColor = '';
+        }, 3000);
+    } else {
+        alert('Failed to send message. Please check CORS settings in n8n.');
+    }
+} catch (error) {
+    console.error('Error:', error);
+    alert('Error connecting to n8n.');
 }
