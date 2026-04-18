@@ -63,8 +63,19 @@ function initN8nContact() {
                 body: JSON.stringify(formData)
             });
 
-            if (response.ok) {
-                contactForm.reset();
+if (response.ok) {
+    contactForm.reset();
+    
+    // إضافة رسالة done
+    const btn = contactForm.querySelector('button[type="submit"]');
+    btn.textContent = '✅ Done!';
+    btn.style.backgroundColor = '#28a745';
+    
+    setTimeout(() => {
+        btn.textContent = 'Send Message';
+        btn.style.backgroundColor = '';
+    }, 3000);
+}
             } else {
                 alert('Failed to send message. Please check CORS settings in n8n.');
             }
